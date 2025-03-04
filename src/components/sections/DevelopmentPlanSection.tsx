@@ -1,37 +1,21 @@
-import { motion } from 'framer-motion';
+import { m } from '../AnimationLayout';
+import { fadeInUpVariants, containerVariants, staggerItemVariants } from '../animations/variants';
 
 const developmentSteps = [
   {
-    title: "需求分析与规划",
-    description: "确定产品核心功能，进行 MVP 需求挖掘与文档起草",
+    title: "个人收款场景",
+    description: "像发红包一样简单，扫一扫就能完成，让数字货币支付融入日常生活",
+    phase: "第一阶段"
   },
   {
-    title: "功能设计与清单整理",
-    description: "构建 MVP 功能列表，确保开发方向清晰明确",
+    title: "商户收款场景",
+    description: "商家扫码即可收款，支持多种数字货币，像微信支付宝一样方便快捷",
+    phase: "第二阶段"
   },
   {
-    title: "项目搭建与架构设计",
-    description: "打造稳定、高效的项目基础架构，为后续开发奠定坚实基础",
-  },
-  {
-    title: "核心服务开发",
-    description: "实现核心支付功能，完成跨链交易的技术整合，确保系统安全与可靠性",
-  },
-  {
-    title: "移动应用开发",
-    description: "为移动端用户量身打造流畅便捷的操作体验",
-  },
-  {
-    title: "MVP 发布",
-    description: "快速推出核心功能版本，获取用户反馈并验证市场需求",
-  },
-  {
-    title: "H5 应用开发",
-    description: "打造功能强大、跨平台的新一代 Web 支付体验",
-  },
-  {
-    title: "持续迭代优化",
-    description: "根据用户反馈和市场趋势不断优化，提升产品竞争力",
+    title: "企业支付场景",
+    description: "为企业提供一站式支付方案，批量发工资、供应链结算都能轻松搞定",
+    phase: "第三阶段"
   }
 ];
 
@@ -39,36 +23,68 @@ export const DevelopmentPlanSection = () => {
   return (
     <section className="relative py-20 md:py-32 section-development section-divider">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center gradient-text" data-aos="fade-up">
-          开发计划
-        </h2>
-        <div className="space-y-8">
+        <m.h2 
+          className="text-3xl md:text-4xl font-bold mb-6 text-center gradient-text"
+          variants={fadeInUpVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
+        >
+          产品规划
+        </m.h2>
+        <m.p
+          className="text-gray-400 text-center mb-16 max-w-2xl mx-auto text-lg"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ delay: 0.2 }}
+        >
+          从个人到企业，让数字货币支付触手可及
+        </m.p>
+        <m.div 
+          className="grid grid-cols-1 md:grid-cols-3 gap-8"
+          variants={containerVariants}
+          initial="visible"
+          style={{
+            willChange: 'transform, opacity',
+            backfaceVisibility: 'hidden',
+            WebkitFontSmoothing: 'subpixel-antialiased',
+            transform: 'translate3d(0,0,0)',
+          }}
+        >
           {developmentSteps.map((step, index) => (
-            <motion.div 
+            <m.div 
               key={index}
-              initial={{ x: index % 2 === 0 ? -50 : 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className="glass p-8 rounded-2xl hover-card max-w-3xl mx-auto"
+              variants={staggerItemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              className="glass p-8 rounded-2xl hover-card relative group overflow-hidden"
               style={{
                 willChange: 'transform, opacity',
                 backfaceVisibility: 'hidden',
                 WebkitFontSmoothing: 'subpixel-antialiased',
-                transform: 'translate3d(0,0,0)'
+                transform: 'translate3d(0,0,0)',
+                height: 'auto',
+                minHeight: '240px'
               }}
             >
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-r from-[#2081e2] to-[#3bb2b8] rounded-full flex items-center justify-center text-xl font-semibold">
-                  {index + 1}
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-4 gradient-text">{step.title}</h3>
+              {/* 背景光效 */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#2081e2]/10 via-[#3bb2b8]/10 to-[#627eea]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+              
+              <div className="relative z-10">
+                <div className="flex flex-col items-center text-center">
+                  <span className="text-sm text-[#3bb2b8] font-medium mb-3">{step.phase}</span>
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#2081e2] to-[#3bb2b8] rounded-full flex items-center justify-center text-2xl font-semibold mb-6">
+                    {index + 1}
+                  </div>
+                  <h3 className="text-2xl font-semibold mb-4 gradient-text">{step.title}</h3>
                   <p className="text-gray-300 leading-relaxed">{step.description}</p>
                 </div>
               </div>
-            </motion.div>
+            </m.div>
           ))}
-        </div>
+        </m.div>
       </div>
     </section>
   );

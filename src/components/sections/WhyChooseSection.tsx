@@ -1,39 +1,55 @@
-import { 
-  CurrencyDollarIcon,
-  ShieldCheckIcon,
-  ArrowPathRoundedSquareIcon,
-  BellAlertIcon 
-} from '@heroicons/react/24/outline';
-import { Feature } from '../Feature';
+import { FeatureCard } from '../FeatureCard';
+import { ScrollReveal } from '../ScrollReveal';
+import { QrCodeIcon, ArrowsRightLeftIcon, ShieldCheckIcon, BellIcon } from '@heroicons/react/24/outline';
+
+const features = [
+  {
+    title: "一键扫码支付",
+    description: "告别复杂的钱包地址，拿起手机扫一扫，像微信支付一样转账",
+    icon: <QrCodeIcon className="w-8 h-8 sm:w-10 sm:h-10 text-blue-400" />
+  },
+  {
+    title: "智能匹配路由",
+    description: "不用操心币种和汇率，系统自动帮您找到最优惠的兑换方案",
+    icon: <ArrowsRightLeftIcon className="w-8 h-8 sm:w-10 sm:h-10 text-teal-400" />
+  },
+  {
+    title: "安全交易保障",
+    description: "每笔交易清清楚楚，智能合约全程保护您的资金安全",
+    icon: <ShieldCheckIcon className="w-8 h-8 sm:w-10 sm:h-10 text-blue-400" />
+  },
+  {
+    title: "支付即时通知",
+    description: "转账进度实时提醒，就像查看快递一样，随时掌握交易状态",
+    icon: <BellIcon className="w-8 h-8 sm:w-10 sm:h-10 text-teal-400" />
+  }
+];
 
 export const WhyChooseSection = () => {
   return (
-    <section className="relative py-20 md:py-32 section-features section-divider">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center gradient-text" data-aos="fade-up">
-          为什么选择 PayK.AI？
-        </h2>
-        <div className="responsive-grid">
-          <Feature 
-            icon={<CurrencyDollarIcon className="w-10 h-10 text-white" />}
-            title="高效便捷"
-            description="收款码支付自动化操作，避免人为输入出错"
-          />
-          <Feature 
-            icon={<ShieldCheckIcon className="w-10 h-10 text-white" />}
-            title="透明安全"
-            description="支付状态、交易记录均可实时查询，信息全链记录，公开透明"
-          />
-          <Feature 
-            icon={<ArrowPathRoundedSquareIcon className="w-10 h-10 text-white" />}
-            title="跨链支持"
-            description="支持多种区块链网络，轻松实现跨链支付"
-          />
-          <Feature 
-            icon={<BellAlertIcon className="w-10 h-10 text-white" />}
-            title="实时通知"
-            description="支付每一步都有即时消息提示，让您随时掌握进度"
-          />
+    <section className="relative py-12 sm:py-20 section-why section-divider">
+      <div className="container mx-auto px-4 sm:px-6">
+        <ScrollReveal>
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 gradient-text">
+              为什么选择 PayK.AI
+            </h2>
+            <p className="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto">
+              扫一扫就能转账，像微信支付一样简单安全
+            </p>
+          </div>
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
+          {features.map((feature, index) => (
+            <ScrollReveal key={index} delay={index * 0.1}>
+              <FeatureCard
+                title={feature.title}
+                description={feature.description}
+                icon={feature.icon}
+              />
+            </ScrollReveal>
+          ))}
         </div>
       </div>
     </section>

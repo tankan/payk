@@ -1,24 +1,34 @@
-import { motion } from 'framer-motion';
+import { m } from './AnimationLayout';
+import { staggerItemVariants, commonTransition } from './animations/variants';
 
 interface FeatureProps {
   icon: React.ReactNode;
   title: string;
   description: string;
+  index?: number;
 }
 
-export const Feature = ({ icon, title, description }: FeatureProps) => (
-  <motion.div 
-    whileHover={{ scale: 1.02 }}
-    transition={{
-      type: "spring",
-      stiffness: 300,
-      damping: 20
+export const Feature = ({ icon, title, description, index = 0 }: FeatureProps) => (
+  <m.div 
+    variants={staggerItemVariants}
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true, margin: "-20%", amount: 0.3 }}
+    whileHover={{ 
+      scale: 1.02,
+      transition: {
+        ...commonTransition,
+        stiffness: 300,
+        damping: 20
+      }
     }}
     style={{
-      willChange: 'transform',
+      willChange: 'transform, opacity',
       backfaceVisibility: 'hidden',
       WebkitFontSmoothing: 'subpixel-antialiased',
-      transform: 'translate3d(0,0,0)'
+      transform: 'translate3d(0,0,0)',
+      height: 'auto',
+      minHeight: '180px'
     }}
     className="glass p-8 rounded-2xl hover-card"
   >
@@ -31,5 +41,5 @@ export const Feature = ({ icon, title, description }: FeatureProps) => (
         <p className="text-gray-300 leading-relaxed">{description}</p>
       </div>
     </div>
-  </motion.div>
+  </m.div>
 ); 

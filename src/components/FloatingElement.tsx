@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { m } from './AnimationLayout';
 
 interface FloatingElementProps {
   children: React.ReactNode;
@@ -7,7 +7,7 @@ interface FloatingElementProps {
 }
 
 export const FloatingElement = ({ children, className = "", delay = 0 }: FloatingElementProps) => (
-  <motion.div
+  <m.div
     className={`absolute ${className}`}
     style={{
       willChange: 'transform',
@@ -30,5 +30,5 @@ export const FloatingElement = ({ children, className = "", delay = 0 }: Floatin
     }}
   >
     {children}
-  </motion.div>
+  </m.div>
 ); 
