@@ -1,4 +1,3 @@
-import { m, animations, defaultTransition } from '../animations/motion';
 import { ScrollReveal } from '../ScrollReveal';
 
 const developmentSteps = [
