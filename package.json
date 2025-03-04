@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "npm run build && pm2 reload ecosystem.config.js --env production"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.0",
