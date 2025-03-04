@@ -1,5 +1,4 @@
-import { m } from './AnimationLayout';
-import { staggerItemVariants, commonTransition } from './animations/variants';
+import { m, defaultTransition } from './animations/motion';
 
 interface FeatureProps {
   icon: React.ReactNode;
@@ -8,29 +7,19 @@ interface FeatureProps {
   index?: number;
 }
 
-export const Feature = ({ icon, title, description, index = 0 }: FeatureProps) => (
+export const Feature = ({ icon, title, description }: FeatureProps) => (
   <m.div 
-    variants={staggerItemVariants}
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true, margin: "-20%", amount: 0.3 }}
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, margin: "-20%" }}
     whileHover={{ 
       scale: 1.02,
       transition: {
-        ...commonTransition,
-        stiffness: 300,
-        damping: 20
+        ...defaultTransition,
+        duration: 0.3
       }
     }}
-    style={{
-      willChange: 'transform, opacity',
-      backfaceVisibility: 'hidden',
-      WebkitFontSmoothing: 'subpixel-antialiased',
-      transform: 'translate3d(0,0,0)',
-      height: 'auto',
-      minHeight: '180px'
-    }}
-    className="glass p-8 rounded-2xl hover-card"
+    className="glass p-8 rounded-2xl hover-card min-h-[180px]"
   >
     <div className="flex items-start gap-6">
       <div className="flex-shrink-0 p-3 bg-gradient-to-r from-[#2081e2] to-[#3bb2b8] rounded-xl">

@@ -1,22 +1,26 @@
-import { m } from './AnimationLayout';
 import { ReactNode } from 'react';
+import { m, animations, defaultViewport, defaultTransition } from './animations/motion';
 
 interface ScrollRevealProps {
   children: ReactNode;
   className?: string;
   delay?: number;
+  animation?: keyof typeof animations;
 }
 
-export const ScrollReveal = ({ children, className = "", delay = 0 }: ScrollRevealProps) => {
+export const ScrollReveal = ({ 
+  children, 
+  className = "", 
+  delay = 0,
+  animation = 'fadeUp'
+}: ScrollRevealProps) => {
   return (
     <m.div
-      initial={{ y: 20, opacity: 0 }}
-      whileInView={{ y: 0, opacity: 1 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ 
-        duration: 0.6,
-        delay,
-        ease: [0.22, 1, 0.36, 1]
+      {...animations[animation]}
+      viewport={defaultViewport}
+      transition={{
+        ...defaultTransition,
+        delay
       }}
       className={className}
     >

@@ -4,11 +4,10 @@ import { HeroSection } from '@/components/sections/HeroSection';
 import { WhyChooseSection } from '@/components/sections/WhyChooseSection';
 import { DevelopmentPlanSection } from '@/components/sections/DevelopmentPlanSection';
 import { CTASection } from '@/components/sections/CTASection';
-import { AnimationLayout } from '@/components/AnimationLayout';
+
 
 export default function Home() {
   return (
-    <AnimationLayout>
       <main className="relative min-h-screen text-white">
         {/* 背景装饰 */}
         <div 
@@ -42,6 +41,5 @@ export default function Home() {
           <CTASection />
         </div>
       </main>
-    </AnimationLayout>
   );
 }

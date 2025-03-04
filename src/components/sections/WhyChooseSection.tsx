@@ -43,11 +43,7 @@ export const WhyChooseSection = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <ScrollReveal key={index} delay={index * 0.1}>
-              <FeatureCard
-                title={feature.title}
-                description={feature.description}
-                icon={feature.icon}
-              />
+              <FeatureCard {...feature} />
             </ScrollReveal>
           ))}
         </div>
