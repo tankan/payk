@@ -36,7 +36,7 @@ const CryptoLogos = {
   ),
   Polygon: () => (
     <svg className="w-full h-full" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#fff" d="M16 0c8.837 0 16 7.163 16 16s-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0zm9.0721 20.0891L21.9917 22.72a.4.4 0 01-.4035.0057l-5.078-2.9235c-.0655-.0378-.1369-.0576-.2102-.0576-.0733 0-.1447.0198-.2102.0576l-5.078 2.9235a.4.4 0 01-.4035-.0057l-3.0804-2.6309a.4.4 0 01-.1435-.4198l1.0519-5.8157a.4.4 0 01.1654-.2424l4.8574-3.3067a.4.4 0 01.4035-.0057l5.078 2.9235c.0655.0378.1369.0576.2102.0576.0733 0 .1447-.0198.2102-.0576l5.078-2.9235a.4.4 0 01.4035.0057l3.0804 2.6309a.4.4 0 01.1435.4198l-1.0519 5.8157a.4.4 0 01-.1654.2424z"/>
+      <path fill="#fff" d="M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0zm8 19.5l-6.7 3.9c-.8.4-1.7.4-2.5 0l-6.7-3.9c-.8-.4-1.2-1.2-1.2-2.1v-7.7c0-.9.5-1.7 1.2-2.1l6.7-3.9c.8-.4 1.7-.4 2.5 0l6.7 3.9c.8.4 1.2 1.2 1.2 2.1v7.7c.1.9-.4 1.7-1.2 2.1z"/>
     </svg>
   ),
   Solana: () => (
@@ -46,12 +46,16 @@ const CryptoLogos = {
   ),
   Cardano: () => (
     <svg className="w-full h-full" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#fff" d="M16 0c8.837 0 16 7.163 16 16s-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0zm-2.24 7.88a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4zm4.48 0a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4zm-8.96 5.12a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4zm13.44 0a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4zM16 14.24a1.76 1.76 0 110 3.52 1.76 1.76 0 010-3.52zm-6.72 5.12a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4zm13.44 0a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4zm-8.96 5.12a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4zm4.48 0a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/>
+      <path fill="#fff" d="M16 0C7.163 0 0 7.163 0 16s7.163 16 16 16 16-7.163 16-16S24.837 0 16 0zm0 5c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm-6 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm12 0c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm-6 3c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm-6 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm12 0c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm-6 6c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2z"/>
     </svg>
   ),
   Ripple: () => (
-    <svg className="w-full h-full" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-      <path fill="#fff" d="M16 0c8.837 0 16 7.163 16 16s-7.163 16-16 16S0 24.837 0 16 7.163 0 16 0zm7.073 18.375a2.327 2.327 0 01-1.927-.902l-4.006 2.306a2.793 2.793 0 01.088.653c0 1.546-1.259 2.804-2.806 2.804-1.547 0-2.806-1.258-2.806-2.804 0-.227.039-.444.088-.653l-4.006-2.306a2.327 2.327 0 01-1.927.902c-1.292 0-2.337-1.044-2.337-2.337 0-1.292 1.045-2.337 2.337-2.337.77 0 1.445.38 1.877.953l4.056-2.337a2.792 2.792 0 01-.088-.653c0-1.546 1.259-2.804 2.806-2.804 1.547 0 2.806 1.258 2.806 2.804 0 .227-.039.444-.088.653l4.006 2.306a2.327 2.327 0 011.927-.902c1.292 0 2.337 1.044 2.337 2.337 0 1.292-1.045 2.337-2.337 2.337z"/>
+    <svg className="w-full h-full" viewBox="0 0 38 33" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#fff" d="M19,0c2.2,0,4,1.8,4,4c0,2.2-1.8,4-4,4s-4-1.8-4-4C15,1.8,16.8,0,19,0z"/>
+      <path fill="#fff" d="M8,12.5c2.2,0,4,1.8,4,4c0,2.2-1.8,4-4,4s-4-1.8-4-4C4,14.3,5.8,12.5,8,12.5z"/>
+      <path fill="#fff" d="M30,12.5c2.2,0,4,1.8,4,4c0,2.2-1.8,4-4,4s-4-1.8-4-4C26,14.3,27.8,12.5,30,12.5z"/>
+      <path fill="#fff" d="M19,25c2.2,0,4,1.8,4,4c0,2.2-1.8,4-4,4s-4-1.8-4-4C15,26.8,16.8,25,19,25z"/>
+      <path fill="#fff" d="M24.1,19.8l-3.8-2.2c-0.8-0.4-1.8-0.4-2.6,0l-3.8,2.2c-0.8,0.4-1.3,1.3-1.3,2.2v4.4c0,0.9,0.5,1.8,1.3,2.2 l3.8,2.2c0.8,0.4,1.8,0.4,2.6,0l3.8-2.2c0.8-0.4,1.3-1.3,1.3-2.2V22C25.4,21.1,24.9,20.2,24.1,19.8z"/>
     </svg>
   ),
   Polkadot: () => (
@@ -81,6 +85,11 @@ interface FloatingElementProps {
 const FloatingElement = ({ children, className = "", delay = 0 }: FloatingElementProps) => (
   <motion.div
     className={`absolute ${className}`}
+    style={{
+      willChange: 'transform',
+      backfaceVisibility: 'hidden',
+      WebkitFontSmoothing: 'subpixel-antialiased'
+    }}
     animate={{
       y: [0, -20, 0],
       rotate: [0, -5, 5, 0],
@@ -90,6 +99,9 @@ const FloatingElement = ({ children, className = "", delay = 0 }: FloatingElemen
       ease: "easeInOut",
       repeat: Infinity,
       delay,
+      type: "tween",
+      damping: 10,
+      stiffness: 100
     }}
   >
     {children}
@@ -114,7 +126,7 @@ export default function Home() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative container mx-auto px-4 py-24 md:py-32 text-center">
+      <section className="relative container mx-auto px-4 py-24 md:py-32 text-center section-hero">
         {/* 装饰性浮动元素 - 优化小屏幕布局 */}
         <FloatingElement className="left-[2%] md:left-[5%] top-10 md:top-20 w-12 md:w-16 h-12 md:h-16 opacity-20">
           <CryptoLogos.Ethereum />
@@ -151,7 +163,17 @@ export default function Home() {
         <motion.div
           initial={{ scale: 0.5, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.5 }}
+          transition={{ 
+            duration: 0.5,
+            type: "spring",
+            damping: 15,
+            stiffness: 100
+          }}
+          style={{
+            willChange: 'transform, opacity',
+            backfaceVisibility: 'hidden',
+            WebkitFontSmoothing: 'subpixel-antialiased'
+          }}
           className="relative max-w-3xl mx-auto"
         >
           {/* 大型以太坊标志背景 */}
@@ -169,7 +191,7 @@ export default function Home() {
       </section>
 
       {/* Payment Process Section */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-20 md:py-32 section-payment section-divider">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center gradient-text" data-aos="fade-up">
             支付流程
@@ -196,7 +218,7 @@ export default function Home() {
       </section>
 
       {/* Development Plan Section */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-20 md:py-32 section-development section-divider">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center gradient-text" data-aos="fade-up">
             开发计划
@@ -226,7 +248,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="relative py-20 md:py-32">
+      <section className="relative py-20 md:py-32 section-features section-divider">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center gradient-text" data-aos="fade-up">
             为什么选择 PayK.AI？
@@ -263,17 +285,17 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass p-8 md:p-16 rounded-3xl max-w-4xl mx-auto text-center"
+            className="glass p-6 sm:p-8 md:p-16 rounded-3xl max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 md:mb-8 gradient-text whitespace-nowrap">
-              准备好开始使用了吗?
+            <h2 className="text-xl sm:text-2xl md:text-4xl font-bold mb-4 md:mb-8 gradient-text">
+              准备好<wbr/>开始使用<wbr/>了吗？
             </h2>
-            <p className="text-lg sm:text-xl mb-8 md:mb-12 text-gray-200 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl mb-6 md:mb-12 text-gray-200 leading-relaxed">
               加入 PayK.AI，体验下一代支付方式
             </p>
-            <button className="bg-gradient-to-r from-[#2081e2] via-[#3bb2b8] to-[#627eea] text-white px-6 sm:px-10 py-3 sm:py-4 rounded-full font-semibold hover:opacity-90 transition-all flex items-center gap-2 sm:gap-3 mx-auto text-base sm:text-lg group">
+            <button className="bg-gradient-to-r from-[#2081e2] via-[#3bb2b8] to-[#627eea] text-white px-4 sm:px-6 md:px-10 py-2 sm:py-3 md:py-4 rounded-full font-semibold hover:opacity-90 transition-all flex items-center gap-2 sm:gap-3 mx-auto text-sm sm:text-base md:text-lg group">
               立即开始
-              <ChevronRightIcon className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
+              <ChevronRightIcon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 group-hover:translate-x-1 transition-transform" />
             </button>
           </motion.div>
         </div>
@@ -285,6 +307,16 @@ export default function Home() {
 const Feature = ({ icon, title, description }: { icon: React.ReactNode, title: string, description: string }) => (
   <motion.div 
     whileHover={{ scale: 1.02 }}
+    transition={{
+      type: "spring",
+      stiffness: 300,
+      damping: 20
+    }}
+    style={{
+      willChange: 'transform',
+      backfaceVisibility: 'hidden',
+      WebkitFontSmoothing: 'subpixel-antialiased'
+    }}
     className="glass p-8 rounded-2xl hover-card"
   >
     <div className="flex items-start gap-6">
